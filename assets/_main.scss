@@ -26,7 +26,6 @@ h6 {
 }
 
 a {
-  display: inline-flex;
   flex: auto;
   align-items: center;
   gap: .5em;
@@ -103,7 +102,6 @@ a .book-icon {
   img {
     height: 1.5em;
     width: 1.5em;
-    margin-inline-end: $padding-8;
   }
 }
 
@@ -114,7 +112,6 @@ a .book-icon {
   .book-menu-content {
     width: $menu-width;
     padding: $padding-16;
-    background: var(--body-background);
 
     @include fixed;
   }
@@ -359,6 +356,10 @@ body[dir="rtl"] .book-menu {
     visibility: hidden;
     margin-inline-start: -$menu-width;
     z-index: 1;
+
+    .book-menu-content {
+      background: var(--body-background);
+    }
   }
 
   .book-toc {
